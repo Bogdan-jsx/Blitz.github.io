@@ -1,0 +1,153 @@
+@import "variables";
+@import "mixins";
+
+.about-us-header {
+    margin-top: 70px;
+
+    h2 {
+        font-size: 35px;
+        font-weight: lighter;
+        font-family: $bebas;
+        color: $headersColor;
+    }
+    p {
+        font-size: $textSize;
+        color: #a4a4a4;
+        font-style: italic;
+    }
+    img {
+        width: 100%;
+    }
+}
+.our-description {
+    margin-top: 35px;
+    @include d-flex($align-items: top) {
+        flex-wrap: wrap;
+    };
+
+    .top-line {
+        width: 100%;
+    }
+
+    .descr-column {
+        width: (96% / 3);
+
+        h3 {
+            font-family: $bebas;
+            font-size: 25px;
+            font-weight: lighter;
+            letter-spacing: 1px;
+            color: $headersColor;
+        }
+        .first-descr {
+            margin-top: 20px;
+            color: #a9a9a9;
+            font-size: $textSize;
+        }
+        .second-descr {
+            margin-top: 25px;
+            color: #6c6c6c;
+            font-size: $textSize;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .descr-column {
+            width: (98% / 2);
+            margin: 25px auto;
+        }
+    }
+    @media screen and (max-width: 630px) {
+        .descr-column {
+            width: 100%;
+            margin: 25px 0;
+        }
+    }
+}
+.our-workers {
+    @include d-flex($align-items: start) {
+        flex-wrap: wrap;
+    };
+    margin-top: 55px;
+    margin-bottom: 50px;
+
+    .worker {
+        width: (96% / 3);
+        border: 1px solid #f8f8f8;
+
+        img {
+            width: 100%;
+        }
+
+        .info {
+            padding: 13px;
+
+            .name {
+                @include d-flex;
+                h3 {
+                    color: $headersColor;
+                    font-size: $secondHeaderSize;
+                    font-family: $bebas;
+                    letter-spacing: 1px;
+                    font-weight: lighter;
+                }
+                p {
+                    font-family: $bebas;
+                    font-size: $textSize;
+                    color: #515151;
+                }
+            }
+            .profession {
+                color: #949393;
+                font-family: $bebas;
+                letter-spacing: 1px;
+                font-weight: lighter;
+                font-size: $textSize;
+            }
+            .about {
+                color: #515151;
+                font-size: $textSize;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            .info {
+                .name {
+                    h3 {
+                        font-size: $smallSecondSize;
+                    }
+                    p {
+                        font-size: $smallTextSize;
+                    }
+                }
+                .profession {
+                    font-size: $smallTextSize;
+                }
+                .about {
+                    font-size: $smallTextSize;
+                }
+            }
+        }
+        @media screen and (max-width: 720px) {
+            width: (98% / 2);
+            margin: 25px auto;
+        }
+        @media screen and (max-width: 450px) {
+            width: 100%;
+            .info {
+                .name {
+                    h3 {
+                        font-size: $secondHeaderSize;
+                    }
+                    p {
+                        font-size: $textSize;
+                    }
+                }
+                .profession {
+                    font-size: $textSize;
+                }
+                .about {
+                    font-size: $textSize;
+                }
+            }
+        }
+    }
+}

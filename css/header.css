@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  width: 67%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+#checkbox-menu, .toggle {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+header .logo {
+  font-family: "Pacifico", cursive;
+  font-size: 46px;
+  color: #474747;
+}
+header nav {
+  width: 62%;
+}
+header nav .nav-elems-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .nav-elems-list li {
+  transition: padding 0.3s linear;
+}
+header nav .nav-elems-list li:hover {
+  border-bottom: 1px solid #474747;
+  padding: 0 10px 0 10px;
+}
+header nav .nav-elems-list .nav-elem-descr {
+  font-family: "Bebas Neue", cursive;
+  font-size: 16px;
+  color: #a5a5a5;
+}
+header nav .nav-elems-list .nav-elem-name {
+  font-family: "Bebas Neue", cursive;
+  font-size: 27px;
+  color: #474747;
+}
+@media screen and (max-width: 1024px) {
+  header .logo {
+    font-size: 36px;
+  }
+  header .nav-elem-descr {
+    font-family: "Bebas Neue", cursive;
+    font-size: 12px;
+    color: #a5a5a5;
+  }
+  header .nav-elem-name {
+    font-family: "Bebas Neue", cursive;
+    font-size: 21px;
+    color: #474747;
+  }
+  header nav {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .logo {
+    font-size: 33px;
+  }
+  header .nav-elem-descr {
+    font-family: "Bebas Neue", cursive;
+    font-size: 9px;
+    color: #a5a5a5;
+  }
+  header .nav-elem-name {
+    font-family: "Bebas Neue", cursive;
+    font-size: 16px;
+    color: #474747;
+  }
+}
+@media screen and (max-width: 550px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 95%;
+  }
+  header .toggle {
+    display: block;
+    width: 40px;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 28px;
+    background-color: #a5a5a5;
+  }
+  header #checkbox-menu:checked + label .touch li {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.7s linear;
+  }
+  header #checkbox-menu:checked + label .touch {
+    padding-left: 50px;
+    border-bottom: 1px solid #474747;
+    height: 350px;
+  }
+  header .nav-elem-descr {
+    display: none;
+  }
+  header .nav-elems-list {
+    display: flex;
+    justify-content: space-around !important;
+    align-items: center;
+    flex-direction: column;
+    height: 0;
+    transition: all 0.3s linear;
+  }
+  header .nav-elems-list li {
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+    width: 95%;
+    opacity: 0;
+    visibility: hidden;
+  }
+  header label {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,127 @@
+@import "variables";
+@import "mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    width: 67%;
+    margin: 0 auto;
+    @media screen and (max-width: 768px) {
+        width: 90%;
+    }
+}
+
+#checkbox-menu, .toggle {
+    display: none;
+}
+
+header {
+    @include d-flex;
+    margin-top: 30px;
+
+    .logo {
+        font-family: $pacifico;
+        font-size: 46px;
+        color: $headersColor;
+    }
+    nav {
+        width: 62%;
+
+        .nav-elems-list {
+            @include d-flex;
+
+            li {
+                transition: padding .3s linear;
+
+                &:hover {
+                    border-bottom: 1px solid $headersColor;
+                    padding: 0 10px 0 10px;
+                }
+            }
+            .nav-elem-descr {
+                @include nav-elem ($bebas, $textSize, #a5a5a5);
+            }
+            .nav-elem-name {
+                @include nav-elem ($bebas, $secondHeaderSize, $headersColor);
+            }
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .logo {
+            font-size: 36px;
+        }
+        .nav-elem-descr {
+            @include nav-elem ($bebas, $smallTextSize, #a5a5a5);
+        }
+        .nav-elem-name {
+            @include nav-elem ($bebas, $smallSecondSize, $headersColor);
+        }
+        nav {
+            width: 75%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .logo {
+            font-size: 33px; 
+        }
+        .nav-elem-descr {
+            @include nav-elem ($bebas, $miniTextSize, #a5a5a5);
+        }
+        .nav-elem-name {
+            @include nav-elem ($bebas, $miniSecondSize, $headersColor);
+        }
+    }
+    @media screen and (max-width: 550px) {
+        @include d-flex($align-items: flex-start);
+        width: 95%;
+        .toggle {
+            display: block;
+            width: 40px;
+            text-align: center;
+            border-radius: 3px;
+            padding: 5px;
+            font-size: 28px;
+            background-color: #a5a5a5;
+        }
+        #checkbox-menu:checked + label .touch li {
+            opacity: 1;
+            visibility: visible;
+            transition: all .7s linear;
+        }
+        #checkbox-menu:checked + label .touch {
+            padding-left: 50px;
+            border-bottom: 1px solid $headersColor;
+            height: 350px;
+        }
+        .nav-elem-descr {
+            display: none;
+        }
+        .nav-elems-list {
+            @include d-flex (space-around !important) {
+                flex-direction: column;
+            }
+            height: 0;
+            transition: all .3s linear;
+
+            li {
+                display: flex;
+                justify-content: flex-end;
+                align-self: center;
+                width: 95%;
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        label {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+        }
+    }
+}

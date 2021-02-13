@@ -1,0 +1,12 @@
+@mixin nav-elem($font, $size, $color) {
+    font-family: $font;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin d-flex($justify: space-between, $align-items: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align-items;
+    @content;
+}
