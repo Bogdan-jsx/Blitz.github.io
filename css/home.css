@@ -120,14 +120,14 @@
 }
 .cols .column .column-header h2 {
   color: #474747;
-  font-size: 27px;
+  font-size: 32px;
   font-family: "Bebas Neue", cursive;
   font-weight: 500;
   line-height: 100%;
   letter-spacing: 2px;
 }
 .cols .column .column-header span {
-  font-size: 54px;
+  font-size: 64px;
   color: #9a9a9a;
   margin-right: 2.1vw;
 }
