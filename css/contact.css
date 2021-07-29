@@ -1,0 +1,101 @@
+.contact-us {
+  width: 70%;
+  margin-top: 65px;
+  padding: 10px;
+}
+.contact-us .top-line {
+  margin-top: 15px;
+}
+.contact-us .contact-us-header h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 32px;
+  color: #474747;
+  font-weight: normal;
+}
+.contact-us .contact-us-header p {
+  font-size: 16px;
+  font-style: italic;
+  color: #a4a4a4;
+}
+.contact-us .contact-us-info p {
+  margin-top: 35px;
+  color: #414141;
+}
+.contact-us form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 25px;
+}
+.contact-us form input {
+  font-size: 16px;
+  font-family: "Bebas Neue", cursive;
+  font-weight: normal;
+  color: #c6c6c6;
+  border-radius: 0;
+  border: 1px solid #eeeeee;
+  padding: 10px;
+  width: 35%;
+  margin-top: 10px;
+}
+.contact-us form input::-webkit-input-placeholder {
+  color: #c6c6c6;
+}
+.contact-us form input::-moz-placeholder {
+  color: #c6c6c6;
+}
+.contact-us form textarea {
+  font-family: "Bebas Neue", cursive;
+  font-weight: normal;
+  font-size: 16px;
+  color: #c6c6c6;
+  margin-top: 10px;
+  border-radius: 0;
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #eeeeee;
+  height: 200px;
+  resize: none;
+}
+.contact-us form textarea::-webkit-input-placeholder {
+  color: #c6c6c6;
+}
+.contact-us form textarea::-moz-placeholder {
+  color: #c6c6c6;
+}
+.contact-us form button {
+  border: none;
+  background: none;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  color: #474747;
+  font-family: "Bebas Neue", cursive;
+  font-size: 18px;
+}
+.contact-us form button span {
+  margin-right: 7px;
+  color: #474747;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact-us form input {
+    width: 60%;
+  }
+  .contact-us form textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 550px) {
+  .contact-us {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .contact-us form input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,66 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+main {
+    @include d-flex($align-items: top);
+    width: 100%;
+}
+
+.side-block {
+    width: 25%;
+    margin-top: 115px;
+
+    h3 {
+        font-size: 18px;
+        font-family: $bebas; 
+        color: $headersColor;
+        font-weight: normal;
+    }
+
+    p {
+        color: #414141;
+        margin-top: 20px;
+    }
+
+    .top-line {
+        margin-top: 0;
+    }
+
+    .blog-categories {
+        margin-top: 30px;
+
+        ul {
+            margin-top: 20px;
+        }
+    }
+
+    .blog-twitter {
+        margin-top: 30px;
+
+        div {
+            p:first-child {
+                margin-top: 20px;
+            }
+            p:last-child {
+                margin-top: 7px;
+                color: #999999;
+            }
+        }
+
+        span, a {
+            color: $textColor;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .side-block {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
