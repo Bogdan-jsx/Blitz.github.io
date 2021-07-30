@@ -1,0 +1,140 @@
+.main-projects-block {
+  margin-top: 65px;
+  width: 70%;
+}
+.main-projects-block .top-line {
+  margin-top: 10px;
+}
+.main-projects-block .projects-header h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 32px;
+  color: #474747;
+  font-weight: normal;
+}
+.main-projects-block .projects-header p {
+  font-size: 16px;
+  font-style: italic;
+  color: #a4a4a4;
+}
+.main-projects-block .projects-categories ul {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main-projects-block .projects-categories ul li {
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+  color: #474747;
+  padding-left: 10px;
+  margin-left: 10px;
+  border-left: 1px solid #474747;
+  line-height: 100%;
+  margin-top: 20px;
+}
+.main-projects-block .projects-categories ul li:first-child {
+  border-left: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+.main-projects-block .projects-categories ul li.active {
+  color: #9a9a9a;
+}
+.main-projects-block .projects-block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main-projects-block .projects-block .project {
+  width: 32%;
+  margin-top: 30px;
+}
+.main-projects-block .projects-block .project .project-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 17.3vw;
+  cursor: pointer;
+}
+.main-projects-block .projects-block .project .project-image > div {
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 0.4s;
+}
+.main-projects-block .projects-block .project .project-image > div > div {
+  position: relative;
+  width: 85px;
+  height: 85px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 auto;
+  top: calc((17.3vw - 85px) / 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-projects-block .projects-block .project .project-image > div > div span {
+  font-size: 60px;
+}
+.main-projects-block .projects-block .project .project-image:hover > div {
+  opacity: 1;
+}
+.main-projects-block .projects-block .project .project-info {
+  padding: 15px;
+}
+.main-projects-block .projects-block .project .project-info h3 {
+  font-family: "Bebas Neue", cursive;
+  color: #474747;
+  font-weight: normal;
+}
+.main-projects-block .projects-block .project .project-info .project-tag {
+  margin-top: 5px;
+  font-family: "Bebas Neue", cursive;
+  font-weight: normal;
+  color: #949494;
+}
+.main-projects-block .projects-block .project .project-info .project-description {
+  margin-top: 20px;
+  color: #515151;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-projects-block .projects-block .project {
+    width: 47%;
+  }
+  .main-projects-block .projects-block .project .project-image {
+    height: 25vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-projects-block .projects-block .project .project-image {
+    height: 37vw;
+  }
+}
+@media screen and (max-width: 550px) {
+  .main-projects-block {
+    width: 100%;
+  }
+  .main-projects-block .projects-block .project .project-image {
+    height: 56vw;
+  }
+}
+@media screen and (max-width: 425px) {
+  .main-projects-block .projects-categories ul li {
+    font-size: 17px;
+    margin-left: 5px;
+    padding-left: 5px;
+  }
+  .main-projects-block .projects-block .project {
+    width: 100%;
+  }
+  .main-projects-block .projects-block .project .project-image {
+    height: 100vw;
+  }
+}

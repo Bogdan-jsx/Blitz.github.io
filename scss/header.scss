@@ -26,9 +26,11 @@ header {
     margin-top: 30px;
 
     .logo {
-        font-family: $pacifico;
-        font-size: 46px;
-        color: $headersColor;
+        a {
+            font-family: $pacifico;
+            font-size: 46px;
+            color: $headersColor;
+        }
     }
     nav {
         width: 62%;
