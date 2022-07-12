@@ -1,13 +1,13 @@
-.swiper-container {
+.swiper {
   margin-top: 50px;
 }
-.swiper-container img {
+.swiper img {
   width: 100%;
 }
-.swiper-container .swiper-pagination {
+.swiper .swiper-pagination {
   text-align: right;
 }
-.swiper-container .swiper-pagination .swiper-pagination-bullet {
+.swiper .swiper-pagination .swiper-pagination-bullet {
   width: 23px;
   height: 5px;
   background-color: black;
@@ -15,10 +15,10 @@
   background: #ffffff;
   opacity: 1;
 }
-.swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+.swiper .swiper-pagination .swiper-pagination-bullet-active {
   background: #444444;
 }
-.swiper-container .swiper-slide-name {
+.swiper .swiper-slide-name {
   padding: 0.65vw 1vw;
   width: 13.5vw;
   height: 13%;
@@ -28,14 +28,14 @@
   bottom: 4px;
   z-index: 5;
 }
-.swiper-container .swiper-slide-name .slide-first-name {
+.swiper .swiper-slide-name .slide-first-name {
   font-family: "Bebas Neue", cursive;
   color: #9a9a9a;
   font-size: 1.2vw;
   margin-top: 6px;
   line-height: 95%;
 }
-.swiper-container .swiper-slide-name .slide-second-name {
+.swiper .swiper-slide-name .slide-second-name {
   font-family: "Bebas Neue", cursive;
   font-weight: lighter;
   color: #ffffff;
@@ -43,33 +43,33 @@
   letter-spacing: 3px;
 }
 @media screen and (max-width: 1625px) {
-  .swiper-container .swiper-slide-name .slide-second-name {
+  .swiper .swiper-slide-name .slide-second-name {
     font-size: 1.8vw;
   }
 }
 @media screen and (max-width: 850px) {
-  .swiper-container .swiper-slide-name {
+  .swiper .swiper-slide-name {
     width: 16vw;
   }
-  .swiper-container .swiper-slide-name .slide-first-name {
+  .swiper .swiper-slide-name .slide-first-name {
     font-size: 1.8vw;
   }
-  .swiper-container .swiper-slide-name .slide-second-name {
+  .swiper .swiper-slide-name .slide-second-name {
     font-size: 2vw;
     line-height: 100%;
   }
 }
 @media screen and (max-width: 547px) {
-  .swiper-container .swiper-slide-name {
+  .swiper .swiper-slide-name {
     height: 20%;
   }
 }
 @media screen and (max-width: 425px) {
-  .swiper-container .swiper-slide-name {
+  .swiper .swiper-slide-name {
     height: 18%;
     width: 25vw;
   }
-  .swiper-container .swiper-slide-name .slide-second-name {
+  .swiper .swiper-slide-name .slide-second-name {
     font-size: 2.5vw;
     line-height: 200%;
   }
